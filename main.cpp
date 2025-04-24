@@ -54,7 +54,7 @@ void input() {
         employee[i].taxDeduction = 0.35f * employee[i].totalPayment;
         employee[i].netPayment = employee[i].totalPayment - employee[i].taxDeduction;
     }
-
+    display_employees();
 }
 
 
