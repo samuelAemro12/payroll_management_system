@@ -38,7 +38,7 @@ void intro() {
 }
 
 void input() {
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < EMPLOYEE_COUNT; i++) {
         cout << "\nEnter information for Employee #" << i + 1 << "\n";
         cout << "Enter Employee ID: ";
         cin >> employee[i].emID;
