@@ -3,6 +3,16 @@ using namespace std;
 
 const int EMPLOYEE_COUNT = 5;
 
+struct Employee {
+    int emID;
+    string name;
+    float hoursWorked;
+    float payRate;
+    float taxDeduction;
+    float totalPayment;
+    float netPayment;
+};
+
 int main (){
 intro();
 
