@@ -1,0 +1,15 @@
+# Ignore compiled output
+*.out
+*.exe
+*.o
+
+# Ignore backup and temporary files
+*~
+*.bak
+*.swp
+
+# macOS system file
+.DS_Store
+
+# VS Code settings folder (if used)
+.vscode/
