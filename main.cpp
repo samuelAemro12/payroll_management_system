@@ -58,6 +58,21 @@ void input() {
 }
 
 
+void display_employees() {
+    cout << "\n=== Employee Payroll Summary ===\n";
+
+    for (int i = 0; i < EMPLOYEE_COUNT; ++i) {
+        cout << "\nEmployee " << i + 1 << ":\n";
+        cout << "Name:\t\t" << employee[i].name << endl;
+        cout << "ID:\t\t" << employee[i].emID << endl;
+        cout << "Hours Worked:\t" << employee[i].hoursWorked << endl;
+        cout << "Pay Rate:\t" << employee[i].payRate << endl;
+        cout << "Tax Deduction:\t" << employee[i].taxDeduction << endl;
+        cout << "Total Payment:\t" << employee[i].totalPayment << endl;
+        cout << "Net Payment:\t" << employee[i].netPayment << endl;
+    }
+}
+
 void menu() {
     int choice;
 
