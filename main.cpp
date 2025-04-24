@@ -18,6 +18,7 @@ Employee employee[EMPLOYEE_COUNT];
 
 int main (){
 intro();
+menu();
 
 return 0;
 }
