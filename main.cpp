@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+const int EMPLOYEE_COUNT = 5;
+
 int main (){
 intro();
 
