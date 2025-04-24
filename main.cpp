@@ -13,6 +13,9 @@ struct Employee {
     float netPayment;
 };
 
+
+Employee employee[EMPLOYEE_COUNT];
+
 int main (){
 intro();
 
