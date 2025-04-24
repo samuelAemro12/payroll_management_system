@@ -31,6 +31,33 @@ void intro() {
     cout << "SAMUEL AEMRO and LEUL YEWONDWOSSEN\n\n";
     // system("cls"); // Optional
 }
+
+void input() {
+    for (int i = 0; i < EMPLOYEE_COUNT; ++i) {
+        cout << "\nEnter Information for Employee " << i + 1 << ":\n";
+
+        cout << "Employee ID: ";
+        cin >> employee[i].emID;
+        cin.ignore();  // Clear input buffer before using getline
+
+        cout << "Employee Name: ";
+        getline(cin, employee[i].name);
+
+        cout << "Hours Worked: ";
+        cin >> employee[i].hoursWorked;
+
+        cout << "Pay Rate: ";
+        cin >> employee[i].payRate;
+
+        cout << "-----------------------------------\n";
+        employee[i].totalPayment = employee[i].hoursWorked * employee[i].payRate;
+        employee[i].taxDeduction = 0.35f * employee[i].totalPayment;
+        employee[i].netPayment = employee[i].totalPayment - employee[i].taxDeduction;
+    }
+
+}
+
+
 void menu() {
     int choice;
 
