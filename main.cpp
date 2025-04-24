@@ -15,7 +15,6 @@ struct Employee {
 
 Employee employee[EMPLOYEE_COUNT];
 
-// Function declarations
 void intro();
 void menu();
 void input();
@@ -33,7 +32,7 @@ void intro() {
     cout << "Payroll Management System\n";
     cout << "CREATED BY:-\n";
     cout << "SAMUEL AEMRO and LEUL YEWONDWOSSEN\n\n";
-    // system("cls"); // Optional, remove if not using Windows
+    // system("cls"); // Optional for Windows users
 }
 
 void input() {
@@ -42,7 +41,7 @@ void input() {
 
         cout << "Employee ID: ";
         cin >> employee[i].emID;
-        cin.ignore();  // Clear input buffer before using getline
+        cin.ignore();  
 
         cout << "Employee Name: ";
         getline(cin, employee[i].name);
@@ -53,7 +52,6 @@ void input() {
         cout << "Pay Rate: ";
         cin >> employee[i].payRate;
 
-        // Calculate payments
         employee[i].totalPayment = employee[i].hoursWorked * employee[i].payRate;
         employee[i].taxDeduction = 0.35f * employee[i].totalPayment;
         employee[i].netPayment = employee[i].totalPayment - employee[i].taxDeduction;
