@@ -1,5 +1,5 @@
 ```markdown
-# Payroll Management System
+### Payroll Management System
 
 A simple C++ program to manage employee payroll information for the Atse Tewodros Finance Office at the University of Gondar.
 
