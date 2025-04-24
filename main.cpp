@@ -13,14 +13,18 @@ struct Employee {
     float netPayment;
 };
 
-
 Employee employee[EMPLOYEE_COUNT];
 
-int main (){
-intro();
-menu();
+// Function declarations
+void intro();
+void menu();
+void input();
+void display_employees();
 
-return 0;
+int main() {
+    intro();
+    menu();
+    return 0;
 }
 
 void intro() {
@@ -29,7 +33,7 @@ void intro() {
     cout << "Payroll Management System\n";
     cout << "CREATED BY:-\n";
     cout << "SAMUEL AEMRO and LEUL YEWONDWOSSEN\n\n";
-    // system("cls"); // Optional
+    // system("cls"); // Optional, remove if not using Windows
 }
 
 void input() {
@@ -49,14 +53,14 @@ void input() {
         cout << "Pay Rate: ";
         cin >> employee[i].payRate;
 
-        cout << "-----------------------------------\n";
+        // Calculate payments
         employee[i].totalPayment = employee[i].hoursWorked * employee[i].payRate;
         employee[i].taxDeduction = 0.35f * employee[i].totalPayment;
         employee[i].netPayment = employee[i].totalPayment - employee[i].taxDeduction;
     }
+
     display_employees();
 }
-
 
 void display_employees() {
     cout << "\n=== Employee Payroll Summary ===\n";
